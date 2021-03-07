@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../assets/002-planting.png"><title>LogIn</title>
+</head>
+<body>
+
+	<fieldset>
+		
+	<table align="center" width="100%">
+		<tr height="60px">
+			<td width="50px">
+				<img src="../assets/002-planting.png" width="100px" height="70px">
+			</td>
+
+			<td align="right">
+			<a href="home.html">Home</a>|
+			<a href="login.html">Login</a>|
+			<a href="registration.html">Registration</a>
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<br>
+	<div>
+	<form method="post" action="../controller/logCheck.php">
+		<fieldset>
+			<legend>LOGIN</legend>
+			<table>
+				<tr>
+					<!-- <td> Username</td> -->
+					<td>
+						<label>Username</label><br>
+						<input type="text" name="username" value="" required="">
+					</td>
+				</tr>
+				<tr>
+					<!-- <td>Password</td> -->
+					<td>
+						<label>Password</label><br>
+					 <input type="Password" name="password" value="" required="">
+					</td>
+				</tr>
+				</table>
+				<input type="checkbox" name="check" value="remember">Remember Me
+				<hr>
+				<input type="submit" name="submit" value="submit">
+				<a href="forgotPassword.html">Forgot Password?</a>
+		</fieldset>
+	</form>
+	<div>
+	<br>
+	<hr>
+	<p align="center">Copyright &copy 2017</p>
+	</fieldset>
+	
+</body>
+</html>
