@@ -1,0 +1,30 @@
+[
+    {
+        "name": "anik",
+        "username": "habib",
+        "email": "habib264521@gmail.com",
+        "password": "12",
+        "category": "farmer"
+    },
+    {
+        "name": "adnan",
+        "username": "habibur",
+        "email": "anik@gmail.com",
+        "password": "123",
+        "category": "buyer"
+    },
+    {
+        "name": "anik123",
+        "username": "habib",
+        "email": "habib264521@gmail.com",
+        "password": "12",
+        "category": "farmer"
+    },
+    {
+        "name": "anik12",
+        "username": "habib",
+        "email": "habib264521@gmail.com",
+        "password": "12",
+        "category": "farmer"
+    }
+]
