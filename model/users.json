@@ -15,16 +15,30 @@
     },
     {
         "name": "anik123",
-        "username": "habib",
+        "username": "habib123",
         "email": "habib264521@gmail.com",
         "password": "12",
         "category": "farmer"
     },
     {
-        "name": "anik12",
-        "username": "habib",
-        "email": "habib264521@gmail.com",
-        "password": "12",
-        "category": "farmer"
+        "name": "Anik",
+        "username": "anik",
+        "email": "anik@gmail.com",
+        "password": "Anik%123",
+        "category": "admin"
+    },
+    {
+        "name": "Adnan Anik",
+        "username": "adnan",
+        "email": "adnan@gmail.com",
+        "password": "Anik@264",
+        "category": "admin"
+    },
+    {
+        "name": "korim",
+        "username": "korim",
+        "email": "korim@gmail.com",
+        "password": "Korim#123",
+        "category": "worker"
     }
 ]
