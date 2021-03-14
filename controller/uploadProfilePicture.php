@@ -7,7 +7,7 @@
 	$ext = explode('.', $file_info['name']);
 	$path = '../assets/profilePicture/'.time().'.'.$ext[1];
 
-	if($ext[1] == 'png' || $ext[1] == 'jpg' || $ext[1] == 'jpge')
+	if($ext[1] == 'png' || $ext[1] == 'jpg' || $ext[1] == 'jpeg')
 	{
 
 		if($file_info['size'] < 4000000)
@@ -26,7 +26,7 @@
 		
 	}
 	else{
-		echo "png, jpg and jpge file are allow";
+		echo "png, jpg and jpeg file are allow";
 	}
 
 
