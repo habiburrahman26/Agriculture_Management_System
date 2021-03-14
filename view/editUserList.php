@@ -1,6 +1,6 @@
 <?php
 	
-	$title = "Edit Profile";
+	$title = "Edit User List";
 	include('header.php');
 ?>
 	<table border="1" align="center" width="100%">
@@ -14,40 +14,33 @@
 	 	<tr height="400px">
 	 		<td width="300px">
 	 			<ul>
-	 				<?php include('link.php'); ?>
+	 				<?php  include('link.php'); ?>
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<form method="post" action="../controller/profileCheck.php">
+	 			<form method='post' action="#">
 	 				<fieldset>
-	 					<legend>EDIT PROFILE</legend>
-	 					<img src="../assets/user.png" alt="profile" width="100px"><br>
-	 					<a href="changeProfilePicture.php">Change</a><br><br>
+	 					<legend>Edit User</legend>
 	 					<table>
-	 						
 	 						<tr>
 	 							<td>Name</td>
-	 							<td><input type="text" name="name" value="<?php echo $_COOKIE['name'];?>"></td>
-	 							<td></td>
+	 							<td>:<input type="text" name="name" value="<?php  $id = $_GET['id']; if($id == '1'){echo "Md.habibur Rahman";}elseif($id == 2){echo "Adnan Anik";}else{echo'Md.Korim';} ?>"></td>
 	 						</tr>
 	 						<tr>
 	 							<td>Username</td>
-	 							<td><input type="text" name="username" value="<?php echo $_COOKIE['username']; 
-	 							   ?>"></td>
-	 							<td></td>
+	 							<td>:<input type="text" name="username" value="<?php  $id = $_GET['id']; if($id == '1'){echo "Habibur Rahman";}elseif($id == 2){echo "Anik";}else{echo'korim';} ?>"></td>
 	 						</tr>
 	 						<tr>
 	 							<td>Email</td>
-	 							<td><input type="text" name="email" value="<?php echo $_COOKIE['email']; ?>"></td>
-	 							<td></td>
+	 							<td>:<input type="text" name="email" value="<?php  $id = $_GET['id']; if($id == '1'){echo "habib2645@gmail.com";}elseif($id == 2){echo "anik12@gmail.com";}else{echo "korim@gmail.com";} ?>"></td>
 	 						</tr>
-	 						
 	 					</table>
 	 					<hr>
-	 					<input type="submit" name="submit" value="submit"><hr>
-	 					<a href="changePassword.php">Change Password</a>
+	 					<input type="submit" name="submit" value="Update">
+
 	 				</fieldset>
 	 			</form>
+	 			
 	 		</td>
 	 	</tr>
 		<tr height="50px">
@@ -58,3 +51,4 @@
 	</table>
 </body>
 </html>
+

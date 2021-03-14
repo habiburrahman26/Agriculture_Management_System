@@ -28,11 +28,11 @@
 			<table>
 				<tr>
 					<td width="150px">Name </td>
-					<td><input type="text" name="name" value="" required="" ></td>
+					<td><input type="text" name="name" value="" pattern="[A-Za-z0-9 ]{3,64}" title="must contain at least three (3) characters and alpha numeric characters and space are allow" required="" ></td>
 				</tr>
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="username" value="" required=""></td>
+					<td><input type="text" name="username" value="" pattern="[A-Za-z0-9._ ]{3,64}" title="must contain at least three (3) characters and alpha numeric characters, period, dash or underscore allow" required=""></td>
 				</tr>
 				<tr>
 					<td>Email</td>
@@ -40,7 +40,7 @@
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password" value="" required=""></td>
+					<td><input type="password" name="password" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#,@,%,$,]).{8,}" title="must not be less than eight (8) characters and must contain at least one of the special characters (@, #, $, %)" required=""></td>
 				</tr>
 				<tr>
 					<td>Re-type password</td>
@@ -62,7 +62,7 @@
 			</table>
 					<table>
 						<tr>
-							<td><input type="submit" name="submit" value="submit"></td>
+							<td><input type="submit" name="submit" value="Sign Up"></td>
 <!-- 							<td>Already habe an account? <a href="login.html">Login</a> here</td> -->
 						</tr>
 						<tr height="40px">

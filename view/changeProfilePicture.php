@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" href="../assets/002-planting.png"><title>Change Profile Picture</title>
-</head>
-<body>
+<?php
+	
+	$title = "Change Profile Picture";
+	include('header.php');
+?>
 
 	<table border="1" align="center" width="100%">
  		<tr height="100px">
@@ -20,7 +19,7 @@
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<from>
+	 			<form method="post" action="../controller/uploadProfilePicture.php" enctype="multipart/form-data">
 	 			<fieldset>
 	 				<legend>CHANGE PROFILE PICTURE</legend>
 	 				<table>
@@ -29,14 +28,14 @@
 	 					</tr>
 	 					<tr>
 	 						<td>
-	 							<input type="file" name="img">
+	 							<input type="file" name="profileImage">
 	 						</td>
 	 					</tr>
 	 				</table>
 	 				<hr>
 	 				<input type="submit" name="submit" value="Upload">
 	 			</fieldset>
-	 		</from>
+	 		</form>
 	 		</td>
 	 	</tr>
 		<tr height="50px">

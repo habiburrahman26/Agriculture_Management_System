@@ -1,6 +1,6 @@
 <?php
 	
-	$title = "Add Product Category";
+	$title = "Delete product Category";
 	include('header.php');
 ?>
 
@@ -19,13 +19,13 @@
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<form method="post" action="../controller/categoryCheck.php">
+	 			<form method="post" action="#">
 	 			<fieldset>
 	 				<legend>Add Product Category</legend>
 	 				<table>
 	 					<tr>
-	 						<td>Category Name: <input type="text" name="category" value="" required=""></td>
-	 						<td><input type="submit" name="submit" value="Add"></td>
+	 						<td>Category Name: <input type="text" name="category" value="<?php $id = $_GET['id']; if($id == '1'){echo "Rice";}elseif($id == 2){echo "Vegetable";}else{echo "Fruits";} ?>" required=""></td>
+	 						<td><input type="submit" name="submit" value="Delete"></td>
 	 					</tr>
 	 				</table>
 	 			</fieldset>

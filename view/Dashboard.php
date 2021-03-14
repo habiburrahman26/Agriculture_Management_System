@@ -1,17 +1,8 @@
 <?php
 	
-	if (!isset($_COOKIE['status'])) {
-		header('location: login.html');
-	}
-
+	$title = "Dashboard";
+	include('header.php');
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" href="../assets/002-planting.png"><title>Dashboard</title>
-</head>
-<body>
 
 	<table border="1" align="center" width="100%">
  		<tr height="100px">

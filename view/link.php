@@ -2,8 +2,8 @@
 <li><a href="addUser.php">Add User</a></li>
 <li><a href="userList.php">View user list</a></li>
 <li><a href="addProductCategory.php">Add Product Category</a></li>
-<li><a href="#">Product category list</a></li>
+<li><a href="productCategoryList.php">Product category list</a></li>
 <li><a href="addTools.php">Add tools</a></li>
-<li><a href="#">view tools</a></li>
-<li><a href="">Report</a></li>
+<li><a href="viewTools.php">view tools</a></li>
+<li><a href="news.php">News</a></li>
 <li><a href="viewProfile.php">View Profile</a></li>

@@ -1,6 +1,6 @@
 <?php
 	
-	$title = "User List";
+	$title = "Product Category List";
 	include('header.php');
 ?>
 	<table border="1" align="center" width="100%">
@@ -18,45 +18,35 @@
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<h2>User List</h2>
-	 			<input type="search" name="userSearch" placeholder="search..." align="center"><br><br>
+	 			<h2>Product Category List</h2>
 	 			<table border="1">
-	 				
 	 				<tr>
 	 					<td width="40px">ID</td>
-	 					<td>Name</td>
-	 					<td>Username</td>
-	 					<td>Email</td>
+	 					<td width="130px">Categoty Name</td>
 	 					<td>Action</td>
 	 				</tr>
 	 				<tr>
 	 					<td>1</td>
-	 					<td>Md.Habibur Rahman</td>
-	 					<td>Habibur Rahman</td>
-	 					<td>habib2645@gmail.com</td>	
+	 					<td>Rice</td>	
 	 					<td>
-	 						<a href="editUserList.php?id=1">EDIT</a> |
-	 						<a href="deleteUser.php?id=1">DELETE</a>
+	 						<a href="editCategory.php?id=1">EDIT</a> |
+	 						<a href="deleteCategory.php?id=1">DELETE</a>
 	 					</td>
 	 				</tr>
 	 				<tr>
 	 					<td>2</td>
-	 					<td>Adnan Anik</td>
-	 					<td>Anik </td>
-	 					<td>anik12@gmail.com</td>	
+	 					<td>vegetable</td>	
 	 					<td>
-	 						<a href="editUserList.php?id=2">EDIT</a> |
-	 						<a href="deleteUser.php?id=2">DELETE</a>
+	 						<a href="editCategory.php?id=2">EDIT</a> |
+	 						<a href="deleteCategory.php?id=2">DELETE</a>
 	 					</td>	
 	 				</tr>
 	 				<tr>
 	 					<td>3</td>
-	 					<td>Korim</td>
-	 					<td>korim </td>
-	 					<td>korim@gmail.com</td>	
+	 					<td>Fruits</td>	
 	 					<td>
-	 						<a href="editUserList.php?id=3">EDIT</a> |
-	 						<a href="deleteUser.php?id=3">DELETE</a>
+	 						<a href="editCategory.php?id=3">EDIT</a> |
+	 						<a href="deleteCategory.php?id=3">DELETE</a>
 	 					</td>	
 	 				</tr>
 

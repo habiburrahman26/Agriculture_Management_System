@@ -1,6 +1,6 @@
 <?php
 	
-	$title = "User List";
+	$title = "View Tools";
 	include('header.php');
 ?>
 	<table border="1" align="center" width="100%">
@@ -18,47 +18,36 @@
 	 			</ul>
 	 		</td>
 	 		<td>
-	 			<h2>User List</h2>
-	 			<input type="search" name="userSearch" placeholder="search..." align="center"><br><br>
+	 			<h2>Tools List</h2>
 	 			<table border="1">
-	 				
 	 				<tr>
 	 					<td width="40px">ID</td>
 	 					<td>Name</td>
-	 					<td>Username</td>
-	 					<td>Email</td>
+	 					<td width="70px">Price</td>
+	 					<td>Picture</td>
 	 					<td>Action</td>
 	 				</tr>
+	 				
 	 				<tr>
 	 					<td>1</td>
-	 					<td>Md.Habibur Rahman</td>
-	 					<td>Habibur Rahman</td>
-	 					<td>habib2645@gmail.com</td>	
+	 					<td>Water Pump</td>
+	 					<td>6000</td>
+	 					<td><img src="../assets/pump.jfif" alt="pump" width="150px" height="100px"></td>
 	 					<td>
-	 						<a href="editUserList.php?id=1">EDIT</a> |
-	 						<a href="deleteUser.php?id=1">DELETE</a>
+	 						<a href="editTool.php?id=1">EDIT</a> |
+	 						<a href="deleteTools.php?id=1">DELETE</a>
 	 					</td>
 	 				</tr>
 	 				<tr>
 	 					<td>2</td>
-	 					<td>Adnan Anik</td>
-	 					<td>Anik </td>
-	 					<td>anik12@gmail.com</td>	
+	 					<td>Tractor</td>
+	 					<td>150000</td>	
+	 					<td><img src="../assets/tractor.jfif" alt="tractor" width="200px" height="100px"></td>
 	 					<td>
-	 						<a href="editUserList.php?id=2">EDIT</a> |
-	 						<a href="deleteUser.php?id=2">DELETE</a>
-	 					</td>	
-	 				</tr>
-	 				<tr>
-	 					<td>3</td>
-	 					<td>Korim</td>
-	 					<td>korim </td>
-	 					<td>korim@gmail.com</td>	
-	 					<td>
-	 						<a href="editUserList.php?id=3">EDIT</a> |
-	 						<a href="deleteUser.php?id=3">DELETE</a>
-	 					</td>	
-	 				</tr>
+	 						<a href="editTool.php?id=2">EDIT</a> |
+	 						<a href="deleteTools.php?id=2">DELETE</a>
+	 					</td>
+	 				</tr>			
 
 	 			</table>
 	 			

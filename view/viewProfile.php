@@ -1,19 +1,9 @@
 <?php
 	
 	session_start();
-	if(!isset($_COOKIE['status']))
-	{
-		header('location:login.html');
-	}
-
+	$title = "View Profile";
+	include('header.php');
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="icon" href="../assets/002-planting.png"><title>View Profile</title>
-</head>
-<body>
 
 	<table border="1" align="center" width="100%">
  		<tr height="100px">
@@ -43,43 +33,12 @@
 	 					</tr>
 	 					<tr height="30px">
 	 						<td>Username</td>
-	 						<td>:<?php 
-	 							include('../controller/read.php');
-
-								foreach ($json as $value) {
-									$name = $value['name'];
-									$username = $value['username'];
-									$Email = $value['email'];
-									$password = $value['password'];
-
-									if($username == $_COOKIE['username'] && $password == $_COOKIE['password'])
-									{
-										echo $username;
-									}
-								}
-								?></td>
+	 						<td>:<?php echo $_SESSION['user']['username']; ?></td>
 	 						
 	 					</tr>
 	 					<tr height="30px">
 	 						<td>Email</td>
-	 						<td width="200px">:
-	 							<?php 
-	 							include('../controller/read.php');
-
-								foreach ($json as $value) {
-									$name = $value['name'];
-									$username = $value['username'];
-									$Email = $value['email'];
-									$password = $value['password'];
-
-									if($username == $_COOKIE['username'] && $password == $_COOKIE['password'])
-									{
-										echo $Email;
-									}
-								}
-								?>
-
-	 						</td>
+	 						<td width="200px">:<?php echo $_SESSION['user']['email']; ?></td>
 	 					</tr>
 	 					
 	 					
