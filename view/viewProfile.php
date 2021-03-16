@@ -1,6 +1,5 @@
 <?php
 	
-	session_start();
 	$title = "View Profile";
 	include('header.php');
 ?>
@@ -28,17 +27,17 @@
 
 	 					<tr height="30px">
 	 						<td width="100px">Name</td>
-	 						<td>:<?php echo $_SESSION['user']['name'];?></td>
+	 						<td>:<?php echo $_COOKIE['name'];?></td>
 	 						
 	 					</tr>
 	 					<tr height="30px">
 	 						<td>Username</td>
-	 						<td>:<?php echo $_SESSION['user']['username']; ?></td>
+	 						<td>:<?php echo $_COOKIE['username']; ?></td>
 	 						
 	 					</tr>
 	 					<tr height="30px">
 	 						<td>Email</td>
-	 						<td width="200px">:<?php echo $_SESSION['user']['email']; ?></td>
+	 						<td width="200px">:<?php echo $_COOKIE['email']; ?></td>
 	 					</tr>
 	 					
 	 					

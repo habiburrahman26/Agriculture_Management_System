@@ -1,11 +1,5 @@
-
 <?php
-	session_start();
-	if(!isset($_COOKIE['status']))
-	{
-		header('location:login.html');
-	}
-
+	
 	if(isset($_POST['submit']))
 	{
 		$currentPass = $_POST['currentPass'];
@@ -31,7 +25,7 @@
 				$username = $value['username'];
 				$password = $value['password'];
 
-				if($username == $_SESSION['user']['username'] && $password == $_SESSION['user']['password'])
+				if($username == $_COOKIE['username'] && $password == $_COOKIE['password'])
 				{
 					
 					$json[$key]['password'] = $newPass;

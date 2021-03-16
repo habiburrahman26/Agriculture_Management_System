@@ -20,20 +20,12 @@
 			
 			if($username == $usernam && $password == $pass && $category== 'admin')
 			{
-				$users=[
-						'name'=>$name,
-						'username' => $usernam,
-						'email' => $email,
-						'password' => $password
-
-			       ];
-			 	$_SESSION['user'] = $users;
 
 				setcookie('name', $name, time()+5000,'/');
 				setcookie('username', $username, time()+5000, '/');
 				setcookie('email',$email, time()+5000, '/');
 				setcookie('password', $password, time()+500, '/');
-				setcookie('status', 'true', time()+5000, '/');
+				$_SESSION['status'] = true;
 				
 				$flag = true;
 			}

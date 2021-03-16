@@ -24,7 +24,7 @@
         "name": "Md.Habibur Rahman",
         "username": "habib",
         "email": "anik@gmail.com",
-        "password": "Anik%123",
+        "password": "Anik%111",
         "category": "admin"
     },
     {
@@ -40,5 +40,12 @@
         "email": "korim@gmail.com",
         "password": "Korim#123",
         "category": "worker"
+    },
+    {
+        "name": "rahim",
+        "username": "rahim",
+        "email": "rahim@gmail.com",
+        "password": "Rahim@123",
+        "category": "farmer"
     }
 ]
