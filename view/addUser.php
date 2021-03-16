@@ -96,7 +96,7 @@
 					
 					Category:
 					<!-- <input type="radio" name="category" value="admin">Admin -->
-					<input type="radio" name="category" value="farmer">Farmer
+					<input type="radio" name="category" value="farmer" required="">Farmer
 					<input type="radio" name="category" value="buyer">Buyer
 					<input type="radio" name="category" value="worker">Worker
 				

@@ -25,7 +25,7 @@
     	$write = json_encode($json, JSON_PRETTY_PRINT);
     	if(fwrite($myfile, $write))
     	{
-    		echo "Tools add successfully";
+    		echo "Tools add successfully"."<br>";
     	}
     	else
     	{
