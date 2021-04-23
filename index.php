@@ -1,5 +1,6 @@
 <?php
 
-header('location:view/home.html');
+//this is go to home.php .....
+header( 'location:view/home.html' );
 
 ?>
