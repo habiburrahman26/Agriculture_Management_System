@@ -1,4 +1,4 @@
-//addcategory
+//addcategory yyy u;
 <?php
 
 $title = "Add Product Category";
