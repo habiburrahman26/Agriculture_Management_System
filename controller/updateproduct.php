@@ -9,7 +9,7 @@ SET name = '$_POST[name]', description = '$_POST[description]', price=$_POST[pri
   WHERE id=$_POST[id]";
 
 
-include '../models/db.php';
+include '../model/db.php';
      
      
       
@@ -19,7 +19,7 @@ include '../models/db.php';
   $result=$connect->UpdateQuery($conobj,$sql);
   $connect->CloseCon($conobj);
 
-  header('location:../views/showproductinfo.php');
+  header('location:../view/showproductinfo.php');
   
   
 
@@ -36,7 +36,7 @@ SET name = '$_POST[name]', description = '$_POST[description]'
   WHERE id=$_POST[uid]";
 
 
-include '../models/db.php';
+include '../model/db.php';
      
      
       
@@ -46,7 +46,7 @@ include '../models/db.php';
   $result=$connect->UpdateQuery($conobj,$sql);
   $connect->CloseCon($conobj);
 
-  header('location:../views/upcomingproductinfo.php');
+  header('location:../view/upcomingproductinfo.php');
   
   
 

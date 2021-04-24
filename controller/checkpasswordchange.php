@@ -36,7 +36,7 @@
       {
         //session_start();
 
-          include('../models/db.php');
+          include('../model/db.php');
 
           $db=new db();
           $conn=$db->OpenCon();

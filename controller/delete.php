@@ -4,7 +4,7 @@
 
 if(isset($_GET['id']))
 {
-  include '../models/db.php';
+  include '../model/db.php';
 
     
   $connect=new db();
@@ -17,13 +17,13 @@ if(isset($_GET['id']))
   $connect->UpdateQuery($conobj,$sql);
 
   $connect->CloseCon($conobj);
-  header('location: ../views/showproductinfo.php');
+  header('location: ../view/showproductinfo.php');
 }
 
 
 if(isset($_GET['uid']))
 {
-  include '../models/db.php';
+  include '../model/db.php';
 
     
   $connect=new db();
@@ -36,7 +36,7 @@ if(isset($_GET['uid']))
   $connect->UpdateQuery($conobj,$sql);
 
   $connect->CloseCon($conobj);
-  header('location: ../views/upcomingproductinfo.php');
+  header('location: ../view/upcomingproductinfo.php');
 }
 
 ?>

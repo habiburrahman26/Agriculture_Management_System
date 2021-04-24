@@ -9,7 +9,7 @@
 <body>
 
 <?php
-     include('../controllers/registration.php');
+     include('../controller/registration.php');
 
 ?>
 

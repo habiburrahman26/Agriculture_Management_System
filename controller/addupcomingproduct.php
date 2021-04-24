@@ -39,7 +39,7 @@
   if($valid)
    {
 
-    include '../models/db.php';
+    include '../model/db.php';
      
     
 

@@ -30,7 +30,7 @@
 
 
 
-            include('../models/db.php');
+            include('../model/db.php');
             $sql= "select * from users where id='$id' and password='$password'";
 
             $db=new db();

@@ -10,7 +10,7 @@
     <?php
      include('header.php');
      include('leftmenu.php');
-     include('../controllers/addupcomingproduct.php');
+     include('../controller/addupcomingproduct.php');
 
 ?>
 

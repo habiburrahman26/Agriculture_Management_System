@@ -12,7 +12,7 @@
 
   include('header.php');
   include('leftmenu.php');
-  include ('../controllers/addproduct.php');
+  include ('../controller/addproduct.php');
      
 
      ?>

@@ -22,7 +22,7 @@
 <?php
 
 
-include "../models/db.php";
+include "../model/db.php";
   $connect=new db();
   $conobj=$connect->OpenCon();
   $sql="SELECT * FROM medicalinformation";

@@ -1,7 +1,7 @@
 <?php
   session_start();
   session_destroy();
-  include('../controllers/LoginCheck.php');
+  include('../controller/LoginCheck.php');
   
   
 

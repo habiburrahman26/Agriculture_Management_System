@@ -26,7 +26,7 @@
 
 <?php
 $id=$tablename="";
-include '../models/db.php';
+include '../model/db.php';
 
 
 $id = $_GET['id'];

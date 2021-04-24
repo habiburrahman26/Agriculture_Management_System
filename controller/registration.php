@@ -44,7 +44,7 @@
 
     if($valid==true)
     {
-      include('../models/db.php');
+      include('../model/db.php');
       if($valid)
       {
       

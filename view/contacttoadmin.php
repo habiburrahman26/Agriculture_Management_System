@@ -12,7 +12,7 @@
 
   include('header.php');
   include('leftmenu.php');
-  include('../controllers/contact.php');
+  include('../controller/contact.php');
 
 
 ?>

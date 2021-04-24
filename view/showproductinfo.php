@@ -27,7 +27,7 @@ include('leftmenu.php');
   
 <?php
 
- include('../controllers/showproductinfo.php');
+ include('../controller/showproductinfo.php');
   echo "<table id='product' border='1px'>";
 
   echo "<tr>";
@@ -69,7 +69,7 @@ include('leftmenu.php');
       echo "<td ><img src='../assets/picture/$row[picture]'alt=''></td>";
 
       echo "<td><p><a href='./updateproductui.php?id=$row[id]'>update</a></p></td>";
-      echo "<td><p><a href='../controllers/delete.php?id=$row[id]'>delete</a></p></td>";
+      echo "<td><p><a href='../controller/delete.php?id=$row[id]'>delete</a></p></td>";
 
      
       
@@ -115,7 +115,7 @@ function searchProduct(table) {
         document.getElementById("product").innerHTML = this.responseText;
       }
     }
-    xhttp.open("GET","../controllers/Search.php?id="+id+"&tablename="+'products',true);
+    xhttp.open("GET","../controller/Search.php?id="+id+"&tablename="+'products',true);
     xhttp.send();
   }
 }

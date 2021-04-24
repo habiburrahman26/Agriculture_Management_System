@@ -29,7 +29,7 @@ include('leftmenu.php');
 <?php
 
 
-   include('../controllers/showupcomingproduct.php');
+   include('../controller/showupcomingproduct.php');
 
 
   echo "<table id='product' border='1px'>";
@@ -59,7 +59,7 @@ include('leftmenu.php');
 
       echo "<td><p><a href='./updateupcomingproductui.php?id=$row[id]'>update</a></p></td>";
 
-      echo "<td><p><a href='../controllers/delete.php?uid=$row[id]'>delete</a></p></td>";
+      echo "<td><p><a href='../controller/delete.php?uid=$row[id]'>delete</a></p></td>";
       
       echo "<br>";
 
@@ -99,7 +99,7 @@ function searchProduct() {
         document.getElementById("product").innerHTML = this.responseText;
       }
     }
-    xhttp.open("GET","../controllers/upcomingproductsearch.php?id="+id+"&tablename="+'upcomingproducts',true);
+    xhttp.open("GET","../controller/upcomingproductsearch.php?id="+id+"&tablename="+'upcomingproducts',true);
     xhttp.send();
   }
 }

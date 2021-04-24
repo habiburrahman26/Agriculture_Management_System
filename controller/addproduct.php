@@ -57,7 +57,7 @@
   if($valid)
    {
 
-    include '../models/db.php';
+    include '../model/db.php';
      
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 

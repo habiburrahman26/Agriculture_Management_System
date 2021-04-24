@@ -9,7 +9,7 @@ include('leftmenu.php');
 
     if(isset($_GET['id']))
     {
-      include '../models/db.php';
+      include '../model/db.php';
      
      
       $sql="select * from products where id= $_GET[id]";
@@ -26,7 +26,7 @@ include('leftmenu.php');
 
 ?>
 
-<form style="margin-top:80px;"  action="../controllers/updateproduct.php" method="post">
+<form style="margin-top:80px;"  action="../controller/updateproduct.php" method="post">
    
 
 <input type="hidden" name="id" value=<?php echo $result['id'];   ?>>
