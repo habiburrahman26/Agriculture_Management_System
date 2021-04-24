@@ -1,0 +1,490 @@
+*{
+	marfin:0;
+	padding:0;
+	list-style-type: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "roboto",sans-serif;
+}
+body{
+	background-color: #CCD1CD ;
+}
+.header{
+	background-color: white;
+	position: fixed;
+	padding: 35px 0px;
+	width: 100%;
+	top: 0;
+}
+.profile{
+	position: absolute;
+	right: 50px;
+	top: 10px;
+}
+.profile:hover{
+	cursor: pointer;
+}
+.profile-container{
+	position: absolute;
+	top: 9%;
+	right: 30px;
+	background-color: #FBFCFC;
+	display: none;
+	
+}
+.profile-container li{
+	display: block;
+	padding: 10px 20px;
+
+}
+.profile-container li:hover{
+	background-color: #CBD1D3 ;
+}
+.side-bar{
+	width:255px;
+	height: 100%;
+	background-color:  #2e86c1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.side-bar a{
+	color: #ecf0f1;
+}
+span{
+	padding: 10px;
+}
+.side-bar li{
+	padding:20px;
+	transition: .4s;
+}
+.side-bar li:hover{
+	background-color: #21618c;
+}
+
+.column{
+	float: left;
+	width: 20%;
+	padding: 0px 10px;
+	position: relative;
+	top: 120px;
+	left: 300px;
+	right: -100px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+.card p{
+	font-size: 1.3rem;
+}
+.card1{
+  background-color: #2FDD9B;
+  color: #F7F9F9;
+}
+.card2{
+	background-color:#2FC8DD;
+	color: #F7F9F9;
+}
+.card3{
+	background-color:#FFC300;
+	color: #F7F9F9;
+}
+.card:hover{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+.row-right{
+	background-color: #ddd;
+	width: 550px;
+	height: 580px;
+	margin: 0 auto;
+	padding: 15px;
+	transform: translate(0, 140px);
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+.row-right #name,#username,#password,#email,#price,#desc,#active{
+	width: 70%;
+	padding: 6px 5px;
+	margin: 6px 62px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid #d6d2c7;
+	background-color: white;
+}
+.row-right #img{
+	width: 70%;
+	margin: 6px 62px;
+}
+.row-right label{
+	margin-left: 62px;
+	/*position: relative;
+	top: 4px;*/
+	font-size: .8rem;
+}
+
+.row-right-product{
+	background-color: #ecf0f1;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 15px;
+	transform: translate(0, 200px);
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.row-right-product #name{
+	width: 70%;
+	padding: 5px 1px;
+	margin: 6px 62px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid #d6d2c7;
+}
+
+.row-right-product label{
+	margin-left: 62px;
+	position: relative;
+	top: 2px;
+	font-size: .9rem;
+}
+#add_button{
+	width: 25%;
+	margin:35px 160px;
+	padding: 10px;
+	background-color: #4CAF50;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+
+#add_button:hover{
+	background-color: #197A2D ;
+}
+#category{
+	padding: 4px 0px;
+	margin: 8px 62px;
+}
+#category input{
+	margin-left: 10px;
+}
+
+#user{
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 35px;
+}
+#product{
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+}
+.tables{
+	border-collapse: collapse;
+  	min-width: 70%;
+  	background-color: white;
+  	margin: 60px 350px;
+}
+.tables td{
+	border-bottom: 1px solid #ddd;
+  	padding: 15px;
+  	margin: 15px;
+}
+
+.tables th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+
+.user-table{
+	border-collapse: collapse;
+  	min-width: 50%;
+  	background-color: white;
+  	margin: 60px 400px;
+}
+.user-table td{
+	border-bottom: 1px solid #ddd;
+  	padding: 15px;
+  	margin: 15px;
+}
+
+.user-table th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+
+#edit-button{
+	border: none;
+	padding: 6px 14px;
+	background-color: #2FC8DD;
+	font-size: 1rem;
+	border-radius: 5px;
+
+}
+#edit-button a{
+	color: #F7F9F9;
+}
+#edit-button:hover{
+	background-color: #1CCDF3;
+}
+#delete-button{
+	border: none;
+	padding: 6px 14px;
+	background-color:#F33030 ;
+	font-size: 1rem;
+	border-radius: 5px;
+
+}
+#delete-button a{
+	color: #F7F9F9;
+}
+#delete-button{
+	color: #F7F9F9;
+}
+#delete-button:hover{
+	background-color:  #DD3737;
+}
+#product-table{
+	border-collapse: collapse;
+  	width: 30%;
+  	background-color: white;
+  	margin: 60px 500px;
+}
+#product-table td{
+	border-bottom: 1px solid #ddd;
+	padding: 8px 35px;
+}
+#msg{
+	background-color:#81D89C ;
+	color: #FFFFFF;
+	padding: 20px 30px;
+	position: sticky;
+	top: 10%;
+	left: 30%;
+	text-align: center;
+	width: 40%;
+	font-size: 1.2rem;
+	display: block;
+
+
+}
+.viewProfile{
+	width: 60%;
+	position: absolute;
+	left: 30%;
+	top: 20%;
+
+}
+#profile-content{
+	padding: 30px 0px;
+}
+.viewProfile img{
+	border-radius: 50%;
+}
+
+.viewProfile label{
+	font-size: 1.5rem;
+}
+#profileEdit{
+	padding: 12px 60px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background-color: #72acf2;
+}
+#changePassword{
+	padding: 12px 50px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background-color: #72acf2;
+}
+#changePassword a{
+	color: #f0f1f2;
+}
+#profileEdit a{
+	color: #f0f1f2;
+}
+
+.editProfile{
+	width: 60%;
+	position: absolute;
+	left: 40%;
+	top: 15%;
+}
+#changeProfilePicture{
+	padding: 8px 16px;
+}
+
+.editProfile #name1,#username1,#email1{
+	width: 40%;
+	padding: 5px 1px;
+	margin: 6px 0px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+#edit-containt{
+	padding: 20px 0;
+}
+#edit-containt button{
+	padding: 12px 20px;
+	border-radius: 5px;
+	background-color: #ff5252;
+	border: none;
+}
+#edit-containt button a{
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+}
+#edit-containt #button{
+	padding: 12px 25px;
+	border-radius: 5px;
+	background-color: #74cf8c;
+	border: none;
+}
+#edit-containt #button {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+}
+.changePassword{
+	width: 60%;
+	position: absolute;
+	left: 40%;
+	top: 25%;
+}
+.changePassword #currentPass,#newPass,#retypePass{
+	width: 40%;
+	padding: 5px 1px;
+	margin: 6px 0px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+#show-text{
+	background-color:#81D89C ;
+	color: #FFFFFF;
+	padding: 20px 30px;
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	text-align: center;
+	width: 40%;
+	font-size: 1.2rem;
+
+}
+ .changePassword button{
+	padding: 12px 20px;
+	border-radius: 5px;
+	background-color: #ff5252;
+	border: none;
+}
+.changePassword button a{
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+}
+.changePassword #button{
+	padding: 12px 25px;
+	border-radius: 5px;
+	background-color: #74cf8c;
+	border: none;
+}
+.changePassword #button {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+}
+#search{
+	width:43%;
+	background-color: black;
+	margin-left: 400px;
+	margin-top: 90px;
+}
+#search #src-input{
+  width: 75%;
+  margin: 8px 25px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 6px;
+  font-size: 1rem;
+
+}
+#search button{
+	padding: 9px 20px;
+	font-size: 1.1rem;
+	border-radius: 4px;
+	background-color: #fd9460;
+	border: none;
+	color: white;
+}
+#search button:hover{
+	background-color: #ff7c3c;
+}
+#search-result{
+	background-color: white;
+	color: black;
+	position: relative;
+	width: 45%;
+	left: 28%;
+	top: 20%;
+}
+.message{
+	margin-left: 250px; 
+	margin-top: 70px;
+	margin-bottom: -70px;
+	background-color: #81D89C;
+	color: #ffffff; 
+	padding: 20px 30px; 
+	font-size: 1.2rem;
+	width: 84%;
+}
+/*.footer{
+	text-align: center;
+	background-color: #1e2021;
+	color: white;
+	text-align: center;
+    font-size: 12px;
+    padding: 15px; 
+}
+
+/*@media screen and (max-width: 600px) {
+  .side-bar{
+  	width: 100%;
+  	display: block;
+  }
+
+  .column{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+}*/
