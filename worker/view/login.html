@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<script type="text/javascript">
+		
+		function s(){
+		
+				var username = document.forms["myform"]["username"].value;
+			
+				if(username ==""){
+					alert("Username required");
+					return false;
+				}
+				
+				var password = document.forms["myform"]["password"].value;
+				
+				if(password ==""){
+					alert("Password required");
+					return false;
+				}
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<div id="page_title">
+		<h1>Worker Login Panel</h1>
+	</div>
+	
+	<div id="nav_bar">
+		<table  border="1" align="left" style="width:250px" >
+			<tr style="height:275px">
+				<td>
+				<img src="../assets/depositphotos_307387490-stock-illustration-worker-icon-glyph-design.jpg" style="width:250px" style="height:275px">
+				</td>
+			</tr>
+		</table>
+		<table align="left" style="width:10px" >
+			<tr>
+				<td> </td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="main_content">
+		<form name="myform" onsubmit="return s()" method="post" action="../controller/loginCheck.php"> 
+			<fieldset style="width:350px;">
+				<legend>Login</legend>
+				<table>
+					<tr>
+						<td>Username</td>
+						<td><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><hr>
+							<input type="submit" name="submit" value="Click here to Login">
+						</td>
+					</tr>
+				</table>
+					<tr>
+						<br>
+						<a href="reg.html"> Sign Up | </a>
+						<a href="forget.html"> Forget Password?</a>			
+					</tr>
+			</fieldset>
+		</form>
+	</div>
+</body>

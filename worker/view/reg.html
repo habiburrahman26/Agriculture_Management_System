@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>Registraion Page</title>
+	<script type="text/javascript">
+		
+		function s(){
+		
+				var username = document.forms["myform"]["username"].value; //1st 1 is form name & 2nd is variable name
+			
+				if(username ==""){
+					alert("Username required");
+					return false;
+				}
+				
+				var name = document.forms["myform"]["name"].value;
+				
+				if(name ==""){
+					alert("Name required");
+					return false;
+				}
+				
+				var email = document.forms["myform"]["email"].value;
+				
+				if(email ==""){
+					alert("Email required");
+					return false;
+				}
+				
+				var dob = document.forms["myform"]["dob"].value;
+				
+				if(dob ==""){
+					alert("Date of Birth required");
+					return false;
+				}
+				
+				var bio = document.forms["myform"]["bio"].value;
+				
+				if(bio ==""){
+					alert("Biodata required");
+					return false;
+				}
+				
+				var con = document.forms["myform"]["con"].value;
+				
+				if(con ==""){
+					alert("Number required");
+					return false;
+				}
+				
+				var password = document.forms["myform"]["password"].value;
+				
+				if(password ==""){
+					alert("Password required");
+					return false;
+				}
+				
+				var repass = document.forms["myform"]["repass"].value;
+				
+				if(repass ==""){
+					alert("Re-type password required");
+					return false;
+				}
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<h1>Worker Registration Panel</h1>
+	
+	<table  border="1" align="left" style="width:250px" >
+		<tr style="height:275px">
+			<td>
+			<img src="../assets/depositphotos_307387490-stock-illustration-worker-icon-glyph-design.jpg" style="width:250px" style="height:275px">
+			</td>
+		</tr>
+	</table>
+	<table align="left" style="width:10px" >
+		<tr>
+			<td> </td>
+		</tr>
+	</table>
+	<form name="myform" method="post" onsubmit="return s()" action="../controller/regCheck.php">
+		
+	
+		<fieldset style="width:350px;">
+			<legend>Registraion</legend>
+			<table>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username"/></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email"/></td>
+				</tr>
+				<tr>
+					<td>Date of Birth</td> 
+					<td><input type="date" name="dob" value=""/> </td>
+				</tr>
+				<tr>
+					<td>Biodata</td>
+					<td><input type="text" name="bio"/></td>
+				</tr>
+				<tr>
+					<td>Contact Number</td>
+					<td><input type="text" name="con"/></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password"/></td>
+				</tr>
+				<tr>
+					<td>Re-type password</td>
+					<td><input type="password" name="repass"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><hr>
+						<input type="submit" name="submit" value="Click here to Register">
+						<a href="login.html">Sign In</a>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
+
