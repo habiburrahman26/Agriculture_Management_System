@@ -1,64 +1,76 @@
 <?php
-	
-	$title = "Product Category List";
-	include('header.php');
-?>
-	<table border="1" align="center" width="100%">
- 		<tr height="100px">
- 			<td width="100px"><img src="../assets/002-planting.png" width="150px" height="70px"></td>
- 			<td align="right">
- 				Logged in as <?php echo $_COOKIE['username']?> | 
- 				<a href="../controller/logout.php">Logout</a>
- 			</td>
-	 	</tr>
-	 	<tr height="400px">
-	 		<td width="300px">
-	 			<ul>
-	 				<?php  include('link.php'); ?>
-	 			</ul>
-	 		</td>
-	 		<td>
-	 			<h2>Product Category List</h2>
-	 			<table border="1">
-	 				<tr>
-	 					<td width="40px">ID</td>
-	 					<td width="130px">Categoty Name</td>
-	 					<td>Action</td>
-	 				</tr>
-	 				<tr>
-	 					<td>1</td>
-	 					<td>Rice</td>	
-	 					<td>
-	 						<a href="editCategory.php?id=1">EDIT</a> |
-	 						<a href="deleteCategory.php?id=1">DELETE</a>
-	 					</td>
-	 				</tr>
-	 				<tr>
-	 					<td>2</td>
-	 					<td>vegetable</td>	
-	 					<td>
-	 						<a href="editCategory.php?id=2">EDIT</a> |
-	 						<a href="deleteCategory.php?id=2">DELETE</a>
-	 					</td>	
-	 				</tr>
-	 				<tr>
-	 					<td>3</td>
-	 					<td>Fruits</td>	
-	 					<td>
-	 						<a href="editCategory.php?id=3">EDIT</a> |
-	 						<a href="deleteCategory.php?id=3">DELETE</a>
-	 					</td>	
-	 				</tr>
 
-	 			</table>
-	 			
-	 		</td>
-	 	</tr>
-		<tr height="50px">
-			<td colspan="3" align="center">
-				copyright@2021
-			</td>
-		</tr>
-	</table>
+	$title = 'Product Category List';
+	include_once('header.php');
+
+?>
+<body>
+	<?php
+	session_start();
+		if (isset($_SESSION['message'])) {?>
+			<div style="margin-left: 250px; margin-top: 70px;margin-bottom: -40px; color: red; background-color: #db7556;color: #ffffff; padding: 20px; font-size: 1.2rem; width: 84%" >
+				<?php   echo $_SESSION['message'];
+				 unset($_SESSION['message']);?>
+			</div>
+			
+
+	<?php		
+		}
+
+	?>
+
+	<script>
+		window.addEventListener('mouseup',function(e){
+			const menu = document.getElementById('menu');
+			if (e.target !=menu) {
+				menu.style.display = 'none';
+			}
+		})
+	</script>
+	
+	<?php  include_once('midel.php'); ?>
+
+	<div id="search">
+		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="productSearch()">
+		<button id="src-btn" >Search</button>
+	</div>
+
+	<div id="search-result"></div>
+
+	<div class="side-bar ">
+		<?php include('link.php'); ?>
+	</div>
+
+
+		
+		<div class = "side-bar ">
+			<?php include('link.php'); ?>
+		</div>
+
+		<div id="product-table">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Action</th>
+				</tr>
+
+				<?php
+
+				require_once('../model/categoryModel.php');
+				
+				$row = getAllCategory();
+
+				foreach ($row as  $value) { echo "<tr>"; ?>
+					
+					<td><?php echo $value['categoryName'];  ?></td>
+					<td>
+						<button id="edit-button"><a href="editCategory.php?id=<?php echo $value['id']; ?>">Edit</a></button>
+						<button  id="delete-button"><a href="../controller/deleteCategory.php?id=<?php echo $value['id']; ?>">Delete</a></button>
+					</td>
+
+				<?php echo "</tr>"; } ?>
+			</table>
+		</div>
+
 </body>
 </html>

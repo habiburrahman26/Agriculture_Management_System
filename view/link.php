@@ -1,9 +1,13 @@
-<li><a href="Dashboard.php">Dashboard</a></li>
-<li><a href="addUser.php">Add User</a></li>
-<li><a href="userList.php">View user list</a></li>
-<li><a href="addProductCategory.php">Add Product Category</a></li>
-<li><a href="productCategoryList.php">Product category list</a></li>
-<li><a href="addTools.php">Add tools</a></li>
-<li><a href="viewTools.php">view tools</a></li>
-<li><a href="news.php">News</a></li>
-<li><a href="viewProfile.php">View Profile</a></li>
+<ul>
+    <li><a href="dashboard.php"><i class="fa fa-desktop" aria-hidden="true"></i><span>Dashboard</span></a></li>
+    <li><a href="addUser.php"><i class="fa fa-user" aria-hidden="true"></i><span>Add Users</span></a></li>
+    <li><a href="userList.php"><i class="fa fa-users" aria-hidden="true"></i><span> View user list</span></a></li>
+    <li><a href="addProductCategory.php"><i class="fa fa-product-hunt" aria-hidden="true"></i><span>Add Product
+                Category</span></a></li>
+    <li><a href="productCategoryList.php"><i class="flaticon-categories"></i><span>Product category list</span> </a>
+    </li>
+    <li><a href="addTools.php"><i class="flaticon-settings"></i><span>Add tools</span></a></li>
+    <li><a href="viewTool.php"><i class="flaticon-steps"></i><span>View tools</span></a></li>
+    <li><a href="report.php"><i class="fa fa-flag" aria-hidden="true"></i><span>Users Report</span></a></li>
+    <li><a href="farmerProductReport.php"><i class="fa fa-flag" aria-hidden="true"></i><span>View Farmer product</span></a></li>
+</ul>

@@ -1,74 +1,72 @@
 <?php
-	
-	$title = "User List";
-	include('header.php');
-?>
-	<table border="1" align="center" width="100%">
- 		<tr height="100px">
- 			<td width="100px"><img src="../assets/002-planting.png" width="150px" height="70px"></td>
- 			<td align="right">
- 				Logged in as <?php echo $_COOKIE['username']?> | 
- 				<a href="../controller/logout.php">Logout</a>
- 			</td>
-	 	</tr>
-	 	<tr height="400px">
-	 		<td width="300px">
-	 			<ul>
-	 				<?php  include('link.php'); ?>
-	 			</ul>
-	 		</td>
-	 		<td>
-	 			<h2>User List</h2>
-	 			<input type="search" name="userSearch" placeholder="search..." align="center"><br><br>
-	 			<table border="1">
-	 				
-	 				<tr>
-	 					<td width="40px">ID</td>
-	 					<td>Name</td>
-	 					<td>Username</td>
-	 					<td>Email</td>
-	 					<td>Action</td>
-	 				</tr>
-	 				<tr>
-	 					<td>1</td>
-	 					<td>Md.Habibur Rahman</td>
-	 					<td>Habibur Rahman</td>
-	 					<td>habib2645@gmail.com</td>	
-	 					<td>
-	 						<a href="editUserList.php?id=1">EDIT</a> |
-	 						<a href="deleteUser.php?id=1">DELETE</a>
-	 					</td>
-	 				</tr>
-	 				<tr>
-	 					<td>2</td>
-	 					<td>Adnan Anik</td>
-	 					<td>Anik </td>
-	 					<td>anik12@gmail.com</td>	
-	 					<td>
-	 						<a href="editUserList.php?id=2">EDIT</a> |
-	 						<a href="deleteUser.php?id=2">DELETE</a>
-	 					</td>	
-	 				</tr>
-	 				<tr>
-	 					<td>3</td>
-	 					<td>Korim</td>
-	 					<td>korim </td>
-	 					<td>korim@gmail.com</td>	
-	 					<td>
-	 						<a href="editUserList.php?id=3">EDIT</a> |
-	 						<a href="deleteUser.php?id=3">DELETE</a>
-	 					</td>	
-	 				</tr>
 
-	 			</table>
-	 			
-	 		</td>
-	 	</tr>
-		<tr height="50px">
-			<td colspan="3" align="center">
-				copyright@2021
-			</td>
-		</tr>
-	</table>
+	$title = 'Users List';
+	include_once('header.php');
+
+?>
+<body>
+	<script>
+		window.addEventListener('mouseup',function(e){
+			const menu = document.getElementById('menu');
+			if (e.target !=menu) {
+				menu.style.display = 'none';
+			}
+		})
+	</script>
+
+	<?php
+	session_start();
+		if (isset($_SESSION['message'])) {?>
+			<div style="margin-left: 250px; margin-top: 70px;margin-bottom: -40px; background-color: #db7556; color: #ffffff; padding: 20px; font-size: 1.2rem; width: 84%" >
+				<?php   echo $_SESSION['message'];
+				 unset($_SESSION['message']);?>
+			</div>			
+	<?php		
+		}
+	?>
+	
+	<?php  include_once('midel.php'); ?>
+
+	<div id="search">
+		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="searchUser()">
+		<button id="src-btn" >Search</button>
+	</div>
+
+		<div id="search-result"></div>
+
+		<div class="side-bar ">
+			<?php include('link.php'); ?>
+		</div>
+
+		<div class="user-table">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+				<?php
+
+				//require_once('../model/userModel.php');
+				
+				$row = getAllUser();
+
+				foreach ($row as  $value) { echo "<tr>"; ?>
+					
+					<td><?php echo $value['name']; ?></td>
+					<td><?php echo $value['username']; ?></td>
+					<td><?php echo $value['email']; ?></td>
+					
+					<td>
+						<button id="edit-button"><a href="editUser.php?id=<?php echo $value['id']; ?>">Edit</a></button>
+						<button  id="delete-button"><a href="../controller/blockUser.php?id=<?php echo $value['id']; ?>">Block</a></button>
+						<button  id="delete-button"><a href="../controller/deleteUser.php?id=<?php echo $value['id']; ?>">Delete</a></button>
+					</td>
+
+				<?php echo "</tr>"; } ?>
+			</table>
+		</div>
+
 </body>
 </html>

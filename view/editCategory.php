@@ -1,42 +1,51 @@
 <?php
-	
-	$title = "Edit product Category";
-	include('header.php');
-?>
 
-	<table border="1" align="center" width="100%">
- 		<tr height="100px">
- 			<td width="100px"><img src="../assets/002-planting.png" width="150px" height="70px"></td>
- 			<td align="right">
- 				Logged in as <?php echo $_COOKIE['username']?> |
- 				<a href="../controller/logout.php">Logout</a>
- 			</td>
-	 	</tr>
-	 	<tr height="400px">
-	 		<td width="300px">
-	 			<ul>
-	 				<?php include('link.php'); ?>
-	 			</ul>
-	 		</td>
-	 		<td>
-	 			<form method="post" action="#">
-	 			<fieldset>
-	 				<legend>Add Product Category</legend>
-	 				<table>
-	 					<tr>
-	 						<td>Category Name: <input type="text" name="category" value="<?php $id = $_GET['id']; if($id == '1'){echo "Rice";}elseif($id == 2){echo "Vegetable";}else{echo "Fruits";} ?>" required=""></td>
-	 						<td><input type="submit" name="submit" value="Edit"></td>
-	 					</tr>
-	 				</table>
-	 			</fieldset>
-	 		</form>
-	 		</td>
-	 	</tr>
-		<tr height="50px">
-			<td colspan="3" align="center">
-				copyright@2021
-			</td>
-		</tr>
-	</table>
+	$title = 'Edit Category';
+	include_once('header.php');
+?>
+<body>
+	
+	
+	<?php
+		session_start();
+			if (isset($_SESSION['message'])) {?>
+				<div class="message">
+					<?php   echo $_SESSION['message'];
+					unset($_SESSION['message']);?>
+				</div>			
+		<?php		
+			}
+		?>
+
+	<?php  include_once('midel.php'); ?>
+	
+		<div class="side-bar ">
+			<?php include_once('link.php'); ?>
+		</div>
+
+		<div id="msg" style="display: none;"></div>
+		<div class="row-right-product">
+			<h1 id="product">Edit Product Category</h1>
+			<form method="POST" action="../controller/editCategory.php?id=<?php $id = $_REQUEST['id']; echo $id;?>" onsubmit = "return editCategoryValidation()">
+				<label>Category Name</label><br>
+				<input id="name" type="text" name="category" value="<?php  require_once('../model/categoryModel.php');
+				$result = getCategoryById($id); echo $result['categoryName']; ?>"><br>
+				<label id="lproduct" style="color: red;font-size: .8rem;"></label><br>
+				<input id="add_button" type="submit" name="submit" value="save">
+
+			</form>
+		</div>
+
+		<script type="text/javascript">
+
+		window.addEventListener('mouseup',function(e){
+			const menu = document.getElementById('menu');
+			if (e.target != menu) {
+				menu.style.display = 'none';
+			}
+		});
+
+	</script>
+
 </body>
 </html>
