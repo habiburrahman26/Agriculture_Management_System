@@ -81,7 +81,7 @@ function regValidation() {
 				if (
 					(name.value[i] >= 'A' && name.value[i] <= 'Z') ||
 					(name.value[i] >= 'a' && name.value[i] <= 'z') ||
-					name.value[i] === ' '
+					name.value[i] == ' '
 				) {
 					flagName = true;
 				} else {
@@ -141,11 +141,10 @@ function regValidation() {
 				lpassword.innerHTML = '*password contain at least one number';
 			}
 
-			let flagPass = special == true && upper == true && lowerCase == true && number == true;
+			let flagPass =
+				special == true && upper == true && lowerCase == true && number == true;
 
 			if (flagName == true && flagUsername == true && flagPass) {
-
-				//ajax impement start for reg
 				const xhttp = new XMLHttpRequest();
 				xhttp.open('POST', '../controller/regCheck.php', true);
 				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -457,12 +456,16 @@ function userValidation() {
 				lpassword.innerHTML = '*password contain at least one number';
 			}
 
-			let flagPass = special == true && upper == true && lowerCase == true && number == true;
+			let flagPass =
+				special == true && upper == true && lowerCase == true && number == true;
 
 			if (flagName == true && flagUsername == true && flagPass) {
 				const xhttp = new XMLHttpRequest();
 				xhttp.open('POST', '../controller/addUser.php', true);
-				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhttp.setRequestHeader(
+					'Content-type',
+					'application/x-www-form-urlencoded'
+				);
 				xhttp.send(
 					'name=' + name.value + '&&username=' + username.value + '&&email=' + email.value +
 					'&&password=' + password.value + '&&category=' + radio

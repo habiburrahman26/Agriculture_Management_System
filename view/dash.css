@@ -218,7 +218,7 @@ span{
 
 .user-table{
 	border-collapse: collapse;
-  	min-width: 50%;
+  	min-width: 45%;
   	background-color: white;
   	margin: 60px 400px;
 }
@@ -229,6 +229,25 @@ span{
 }
 
 .user-table th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+.show-table{
+	border-collapse: collapse;
+  	min-width: 50%;
+  	background-color: white;
+  	margin: 200px 350px;
+}
+.show-table td{
+	border-bottom: 1px solid #ddd;
+  	padding: 15px;
+  	margin: 15px;
+}
+
+.show-table th {
   border-bottom: 1px solid #ddd;
   padding: 12px 15px;
   padding-bottom: 12px;
@@ -465,6 +484,16 @@ span{
 	padding: 20px 30px; 
 	font-size: 1.2rem;
 	width: 84%;
+}
+.show-report{
+	background-color:rgb(255, 255, 255);
+	min-width: 200px;
+	max-height: 200px;
+	margin:300px 350px;
+
+}
+#show-report-container{
+	padding: 8px 5px;;
 }
 /*.footer{
 	text-align: center;
