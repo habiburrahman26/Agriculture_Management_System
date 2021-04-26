@@ -81,11 +81,27 @@ if ( $name == '' ) {
 
     if ( $flagName == true && $flagUsername == true && $checkPass ) {
         require_once '../model/userModel.php';
-        $result = insertUser( $name, $username, $email, $password, $_POST['category'] );
-        if ( $result ) {
-            echo "Registration Successfull";
-        } else {
-            echo "Error Occur";
+        $status = getAllUser();
+
+        //check username in datbase already have exist 
+
+        $flagCheckUsername = false;
+
+        foreach($status as $value){
+            $user = $value['username'];
+            if($user == $username){
+                echo "This username already exixst!! please try again";
+                $flagCheckUsername = true;
+                break;
+            }
+        }
+        if($flagCheckUsername == false){
+            $result = insertUser( $name, $username, $email, $password, $_POST['category'] );
+            if ( $result ) {
+                echo "Registration Successfull";
+            } else {
+                echo "Error Occur";
+            } 
         }
     }
 
