@@ -24,8 +24,6 @@
                 <strong><p style="border-bottom: 1px solid black; padding: 10px 0">Account</p></strong>
                 <ul style="list-style-type: none;">
                     <li><a href="controller/viewProfile.php">Veiw Profile</a></li>
-                    <li><a href="controller/checkReg.php">Registration check</a></li>
-					<li><a href="controller/checkLogin.php">Login Check </a></li>
                     <li><a href="buyProduct.php">Buy Product</a></li>
                     <li><a href="DeliveryProduct.html">Delivary of Sell Product</a></li>
                     <li><a href="OrderListBuyer.html">Order list of Buyer</a></li>

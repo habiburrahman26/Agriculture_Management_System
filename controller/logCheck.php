@@ -33,33 +33,33 @@ if ( isset( $_POST['submit'] ) ) {
             } elseif ($type == 'farmer' && $active == 1) {
 
                 $id = $row['id'];
-                $email = $row['email'];
+                //$email = $row['email'];
                 $name = $row['name'];
                 $_SESSION['id'] = $id;
                 $_SESSION['email'] = $email;
                 $_SESSION['name']=$username;
-                setcookie( 'email', $email, time() + 3600, '/' );
+                //setcookie( 'email', $email, time() + 3600, '/' );
                 setcookie( 'status', 'true', time() + 3600, '/' );
-            	 header('location:../view/farmerHome.php');
+            	header('location:../view/farmerHome.php');
 
             }elseif ($type == 'worker' && $active == 1) {
                 $id = $row['id'];
-                $email = $row['email'];
-                $name = $row['name'];
+                //$email = $row['email'];
+                //$name = $row['name'];
                 setcookie( 'id', $id, time() + 3600, '/' );
-                setcookie( 'name', $name, time() + 3600, '/' );
-                $_SESSION['name']=$username;
-                setcookie( 'email', $email, time() + 3600, '/' );
+                //setcookie( 'name', $name, time() + 3600, '/' );
+                $_SESSION['username']=$username;
+                //setcookie( 'email', $email, time() + 3600, '/' );
                 setcookie( 'status', 'true', time() + 3600, '/' );
-                 header('location:../view/contact.html');
+                header('location: ../view/homeWorker.php');
             }elseif ($type == 'buyer' && $active == 1) {
                 $id = $row['id'];
-                $email = $row['email'];
-                $name = $row['name'];
+                //$email = $row['email'];
+                //$name = $row['name'];
                 setcookie( 'id', $id, time() + 3600, '/' );
-                setcookie( 'name', $name, time() + 3600, '/' );
+                //setcookie( 'name', $name, time() + 3600, '/' );
                 $_SESSION['name']=$username;
-                setcookie( 'email', $email, time() + 3600, '/' );
+                //setcookie( 'email', $email, time() + 3600, '/' );
                 setcookie( 'status', 'true', time() + 3600, '/' );
                  header('location:../view/buyerDashboard.php');
             } elseif ( $active == '0' ) {

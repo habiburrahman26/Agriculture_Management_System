@@ -1,6 +1,6 @@
 <?php
 
-	$title = 'Users List';
+	$title = 'Farmer Product List';
 	include_once('header.php');
 
 ?>
@@ -28,7 +28,7 @@
 	<?php  include_once('midel.php'); ?>
 
 	<div id="search">
-		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="searchUser()">
+		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="searchProduct()">
 		<button id="src-btn" >Search</button>
 	</div>
 
@@ -38,31 +38,34 @@
 			<?php include('link.php'); ?>
 		</div>
 
-		<div class="user-table">
+		<div class="table-Farmer-product">
 			<table>
 				<tr>
-				<!-- 	<th>Name</th> -->
-					<th>Username</th>
-					<th>Email</th>
-					<th>Type</th>
+                    <th>Name</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Picture</th>
 					<th>Action</th>
 				</tr>
 				<?php
 
-				//require_once('../model/userModel.php');
+				require_once('../model/contact.php');
 				
-				$row = getAllUser();
+				$row = getAllProduct();
 
 				foreach ($row as  $value) { echo "<tr>"; ?>
 					
+					<td><?php echo $value['name']; ?></td>
+					<td><?php echo $value['description']; ?></td>
+					<td><?php echo $value['price']; ?></td>
+                    <td><?php echo $value['quantity']; ?></td>
+                    <td><?php echo "<img src='../assets/picture/".$value['picture']."' width='100px'>"; ?></td>
 					
-					<td><?php echo $value['username']; ?></td>
-					<td><?php echo $value['email']; ?></td>
-					<td><?php echo $value['type']; ?></td>
 					<td>
-						<button id="edit-button"><a href="editUser.php?id=<?php echo $value['id']; ?>">Edit</a></button>
-						<button  id="delete-button"><a href="../controller/blockUser.php?id=<?php echo $value['id']; ?>">Block</a></button>
-						<button  id="delete-button"><a href="../controller/deleteUser.php?id=<?php echo $value['id']; ?>">Delete</a></button>
+						<button id="edit-button"><a href="editProduct.php?id=<?php echo $value['id']; ?>">Edit</a></button>
+						
+						<button  id="delete-button"><a href="../controller/deleteProduct.php?id=<?php echo $value['id']; ?>">Delete</a></button>
 					</td>
 
 				<?php echo "</tr>"; } ?>

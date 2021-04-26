@@ -22,13 +22,13 @@ function updateStatus( $id ) {
 
     if ( mysqli_query( $conn, $sql ) ) {
         return true;
-    }else{
+    } else {
         return false;
     }
 
 }
 
-function getMessagegById($id){
+function getMessagegById( $id ) {
     $conn = getConnection();
     $sql = "select * from contact where $id = '{$id}'";
     $result = mysqli_query( $conn, $sql );
@@ -36,8 +36,7 @@ function getMessagegById($id){
     return $row;
 }
 
-
-function getAllProduct(){
+function getAllProduct() {
     $conn = getConnection();
     $sql = "select * from products";
     $result = mysqli_query( $conn, $sql );
@@ -50,12 +49,35 @@ function getAllProduct(){
     return $products;
 }
 
-function getProductById($id){
+function getProductById( $id ) {
     $conn = getConnection();
-    $sql = "select * from products where $id = '{$id}'";
+    $sql = "select * from products where id = '{$id}'";
     $result = mysqli_query( $conn, $sql );
     $row = mysqli_fetch_assoc( $result );
     return $row;
+}
+
+function deleteProduct( $id ) {
+    $conn = getConnection();
+    $sql = "delete from products where id = '{$id}'";
+    if ( mysqli_query( $conn, $sql ) ) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+function updateProduct( $id, $name, $desc, $price, $quantity ) {
+    $conn = getConnection();
+    $sql = "update products set name = '{$name}', description='{$desc}', price='{$price}',
+            quantity='{$quantity}' where id ='{$id}'";
+
+    if ( mysqli_query( $conn, $sql ) ) {
+        return true;
+    }else{
+        return false;
+    }
 }
 
 ?>

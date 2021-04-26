@@ -529,29 +529,6 @@ function searchUser() {
 	}
 }
 
-function productSearch() {
-
-	const name = document.getElementById('src-input').value;
-
-	if (name.trim() === '' || name.trim() == null) {
-		document.getElementById('search-result').style.display = 'none';
-	}
-
-	else {
-		xhttp = new XMLHttpRequest();
-		xhttp.open('POST', '../controller/productSearch.php', true);
-		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-		xhttp.send('name=' + name);
-
-		xhttp.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				document.getElementById('search-result').innerHTML = this.responseText;
-				document.getElementById('search-result').style.display = 'block';
-			}
-		}
-	}
-}
-
 function profileValidation() {
 	const name = document.getElementById('name1');
 	const username = document.getElementById('username1');
@@ -628,4 +605,53 @@ function profileValidation() {
 			return false;
 		}
 	}
+}
+
+function categorySearch() {
+
+	const name = document.getElementById('src-input').value;
+
+	if (name.trim() === '' || name.trim() == null) {
+		document.getElementById('search-result').style.display = 'none';
+	}
+
+	else {
+		xhttp = new XMLHttpRequest();
+		xhttp.open('POST', '../controller/categorySearch.php', true);
+		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhttp.send('name=' + name);
+
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById('search-result').innerHTML = this.responseText;
+				document.getElementById('search-result').style.display = 'block';
+			}
+		}
+	}
+}
+
+function searchProduct(){
+	
+	const search = document.getElementById("src-input").value;
+
+	if (search.trim() === '' || search.trim() == null) {
+		document.getElementById('search-result').style.display = 'none';
+	}else{
+
+		// ajax implement for search Product
+
+		xhttp = new XMLHttpRequest();
+		xhttp.open('POST', '../controller/productSearch.php', true);
+		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+		xhttp.send('search='+search);
+
+		xhttp.onreadystatechange = function(){
+			if(this.responseText.readyState == 4 && this.status == 200){
+				document.getElementById('search-result').innerHTML=this.responce;
+				document.getElementById('search-result').style.display = 'block';
+			}
+		}
+	}
+
+
 }

@@ -31,7 +31,7 @@
 	<?php  include_once('midel.php'); ?>
 
 	<div id="search">
-		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="productSearch()">
+		<input id="src-input" type="text" name="search" placeholder="Search" onkeyup="categorySearch()">
 		<button id="src-btn" >Search</button>
 	</div>
 

@@ -8,15 +8,16 @@ $id = $_COOKIE['id'];
 <body style="background-color: white;">
 
 		<?php
-session_start();
-if ( isset( $_SESSION['message'] ) ) {?>
-				<div class="message" >
+			session_start();
+			if ( isset( $_SESSION['message'] ) ) {?>
+				<div class="message"style="margin-left: 600px; margin-top: 120px; margin-bottom: -130px; background-color: #ffe3e6;color: black;
+										 padding: 16px 10px; font-size: .9rem; width: 26%; border-radius: 6px;border:1px solid #e89090;" >
 					<?php echo $_SESSION['message'];
-    unset( $_SESSION['message'] ); ?>
+   			 unset( $_SESSION['message'] ); ?>
 				</div>
-		<?php
-}
-?>
+			<?php
+				}
+			?>
 
 		<div id="show-text" style="display: none;" ></div>
 		<div class="side-bar ">

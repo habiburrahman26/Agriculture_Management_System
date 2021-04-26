@@ -218,7 +218,7 @@ span{
 
 .user-table{
 	border-collapse: collapse;
-  	min-width: 50%;
+  	min-width: 47%;
   	background-color: white;
   	margin: 60px 400px;
 }
@@ -479,6 +479,25 @@ span{
 }
 
 .show-table th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+.table-Farmer-product{
+	border-collapse: collapse;
+  	min-width: 80%;
+  	background-color: white;
+  	margin: 60px 290px;
+}
+.table-Farmer-product td{
+	border-bottom: 1px solid #ddd;
+  	padding: 15px;
+  	margin: 15px;
+}
+
+.table-Farmer-product th {
   border-bottom: 1px solid #ddd;
   padding: 12px 15px;
   padding-bottom: 12px;

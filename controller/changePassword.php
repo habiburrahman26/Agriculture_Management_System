@@ -13,9 +13,11 @@ if ( isset( $_POST['submit'] ) ) {
     } else if ( strlen( $new ) < 6 ) {
         echo "password can't be less than 6 character";
     } elseif ( $currentPassword == $new ) {
-        echo "current and new password can't be same";
+        $_SESSION['message'] = "current and new password can't be same";
+        header( 'location:../view/changePassword.php' );
     } elseif ( $new != $retype ) {
-        echo "password doesn't match";
+        $_SESSION['message'] = "password doesn't match";
+        header( 'location:../view/changePassword.php' );
     } else if ( $current != $currentPassword ) {
         echo "current password doesn't match";
     } else {
